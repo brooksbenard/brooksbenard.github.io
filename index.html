@@ -73,12 +73,19 @@
       margin-bottom: 2rem;
     }
 
+    .header-row {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
     .profile-photo {
       width: 120px;
       height: 120px;
       border-radius: 50%;
       overflow: hidden;
-      margin-bottom: 1rem;
+      flex-shrink: 0;
     }
 
     .profile-photo img {
@@ -99,7 +106,11 @@
     .tagline {
       color: var(--text-muted);
       font-size: 1rem;
-      margin: 0 0 1.5rem 0;
+      margin: 0;
+    }
+
+    .header-info {
+      flex: 1;
     }
 
     .bio {
@@ -251,11 +262,15 @@
     </nav>
 
     <header id="about">
-      <div class="profile-photo">
-        <img src="linkedin_pic.jpeg" alt="Brooks Benard" width="120" height="120" />
+      <div class="header-row">
+        <div class="profile-photo">
+          <img src="linkedin_pic.jpeg" alt="Brooks Benard" width="120" height="120" />
+        </div>
+        <div class="header-info">
+          <h1>Brooks Benard, Ph.D.</h1>
+          <p class="tagline">Computational Cancer Biologist · Stanford University</p>
+        </div>
       </div>
-      <h1>Brooks Benard, Ph.D.</h1>
-      <p class="tagline">Computational Cancer Biologist · Stanford University</p>
 
       <p class="bio">
         I am a computational biologist in the Department of Pathology at Stanford University. My work focuses on developing and applying statistical learning methods to identify therapeutically relevant targets from gene expression data across bulk, single-cell, and spatial modalities in cancer.
