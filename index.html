@@ -130,12 +130,22 @@
     }
 
     section h2 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       font-size: 0.85rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       color: var(--text-muted);
       margin: 0 0 1rem 0;
+    }
+
+    section h2 .section-icon {
+      width: 1.1rem;
+      height: 1.1rem;
+      flex-shrink: 0;
+      color: var(--accent);
     }
 
     .item {
@@ -222,12 +232,12 @@
     </div>
 
     <section>
-      <h2>Contact</h2>
+      <h2><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg> Contact</h2>
       <p class="bio" style="margin-bottom:0"><a href="mailto:bbenard@stanford.edu">bbenard@stanford.edu</a></p>
     </section>
 
     <section>
-      <h2>Projects & Apps</h2>
+      <h2><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/><path d="M12 11v6M9 14h6"/></svg> Projects & Apps</h2>
       <div class="item">
         <h3>PRECOG</h3>
         <p class="meta"><a href="https://precog.stanford.edu/" target="_blank" rel="noopener">precog.stanford.edu</a></p>
@@ -241,7 +251,7 @@
     </section>
 
     <section>
-      <h2>Selected Publications</h2>
+      <h2><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/><path d="M8 7h8M8 11h8"/></svg> Selected Publications</h2>
       <p style="margin:0 0 1rem 0; font-size:0.9rem; color:var(--text-muted)">Full list on <a href="https://scholar.google.com/citations?user=AJjgcfsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> (359+ citations, h-index 9).</p>
       <div class="item">
         <h3>Comprehensive molecular profiling of multiple myeloma identifies refined copy number and expression subtypes</h3>
@@ -258,6 +268,11 @@
         <p class="meta">BA Benard, CK Lalgudi, I Ilerten, RH Wang, AJ Gentles · Nucleic Acids Research 54 (D1), D1579–D1589 · 2026</p>
         <p><a href="https://precog.stanford.edu/" target="_blank" rel="noopener">precog.stanford.edu</a> · <a href="https://doi.org/10.1093/nar/gkaf1215" target="_blank" rel="noopener">DOI</a></p>
       </div>
+    </section>
+
+    <section>
+      <h2><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M9 17.5l3-7 3 7M15 10.5h3l-2 4"/><path d="M5.5 17.5h3l2-6.5"/></svg> Free Time</h2>
+      <p class="bio" style="margin-bottom:0">When I'm not in the lab, I'm usually on the bike or on the trails. I track my rides and runs on <a href="https://www.strava.com/athletes/65176248" target="_blank" rel="noopener">Strava</a>—follow me there for routes and training.</p>
     </section>
 
     <footer>
