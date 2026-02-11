@@ -6,7 +6,7 @@
   <title>Brooks Benard, Ph.D. — Computational Biologist, Stanford University</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;700&family=Roboto:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #fafafa;
@@ -237,6 +237,26 @@
       text-decoration: underline;
     }
 
+    .pub-links .scholar-link {
+      color: #1a73e8;
+      font-family: Roboto, Arial, sans-serif;
+      text-decoration: none;
+    }
+
+    .pub-links .scholar-link:hover {
+      text-decoration: underline;
+    }
+
+    .pub-links .orcid-link {
+      color: #a6ce39;
+      font-family: Lato, Arial, sans-serif;
+      text-decoration: none;
+    }
+
+    .pub-links .orcid-link:hover {
+      text-decoration: underline;
+    }
+
     .item p {
       margin: 0;
       font-size: 0.95rem;
@@ -351,7 +371,7 @@
 
     <section id="publications">
       <h2>Publications</h2>
-      <p style="margin:0 0 1rem 0; font-size:0.9rem; color:var(--text-muted)">Full list on <a href="https://scholar.google.com/citations?user=AJjgcfsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>. <a href="https://orcid.org/0000-0001-7154-744X" target="_blank" rel="noopener">ORCID</a></p>
+      <p class="pub-links" style="margin:0 0 1rem 0; font-size:0.9rem; color:var(--text-muted)">Full list on <a href="https://scholar.google.com/citations?user=AJjgcfsAAAAJ&hl=en" target="_blank" rel="noopener" class="scholar-link">Google Scholar</a> | <a href="https://orcid.org/0000-0001-7154-744X" target="_blank" rel="noopener" class="orcid-link">ORCiD</a></p>
       <div class="item">
         <h3>Comprehensive molecular profiling of multiple myeloma identifies refined copy number and expression subtypes</h3>
         <p class="meta">S Skerget, D Penaherrera, A Chari, … B Benard, … · Nature Genetics 56 (9), 1878–1889 · 2024</p>
