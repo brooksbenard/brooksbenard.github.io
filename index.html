@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brooks Benard</title>
+  <title>Brooks Benard, Ph.D. — Computational Biologist, Stanford University</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #e8e9eb;
-      --surface: #f2f3f5;
+      --bg: #fafafa;
       --text: #1a1a1a;
-      --text-muted: #4a4a4a;
+      --text-muted: #555;
       --accent: #722f37;
-      --accent-hover: #8b3a44;
-      --border: #c8cacc;
+      --border: #e0e0e0;
     }
 
     * {
@@ -28,30 +26,58 @@
 
     body {
       margin: 0;
-      font-family: "DM Sans", system-ui, sans-serif;
+      font-family: "Source Sans 3", system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
       min-height: 100vh;
+      font-size: 1rem;
     }
 
     .container {
-      max-width: 680px;
+      max-width: 720px;
       margin: 0 auto;
-      padding: 3rem 1.5rem;
+      padding: 0 1.5rem 4rem;
     }
 
+    /* Top navigation — King-style */
+    nav {
+      padding: 2rem 0 1.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* Header / About */
     header {
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
 
     .profile-photo {
-      width: 140px;
-      height: 140px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       overflow: hidden;
-      margin-bottom: 1.25rem;
-      flex-shrink: 0;
+      margin-bottom: 1rem;
     }
 
     .profile-photo img {
@@ -62,103 +88,69 @@
     }
 
     h1 {
-      font-size: 1.75rem;
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 1.85rem;
       font-weight: 700;
+      margin: 0 0 0.25rem 0;
       letter-spacing: -0.02em;
-      margin: 0 0 0.5rem 0;
     }
 
     .tagline {
       color: var(--text-muted);
       font-size: 1rem;
-      margin: 0;
+      margin: 0 0 1.5rem 0;
     }
 
     .bio {
-      margin-bottom: 2.5rem;
       color: var(--text);
+      margin-bottom: 1.25rem;
       font-size: 1.05rem;
     }
 
-    .bio a,
-    a[href] {
+    .bio a {
       color: var(--accent);
+      text-decoration: none;
     }
 
     .bio a:hover {
       text-decoration: underline;
     }
 
-    .activity-icon {
-      display: inline-block;
-      width: 1.1em;
-      height: 1.1em;
-      vertical-align: -0.2em;
-      margin-right: 0.2em;
-      color: var(--accent);
-    }
-
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .link-card {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.65rem 1rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      color: var(--text);
-      text-decoration: none;
+    /* External links row under about */
+    .connect {
+      margin: 1.5rem 0 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
       font-size: 0.9rem;
-      transition: border-color 0.2s, background 0.2s;
     }
 
-    .link-card:hover {
-      border-color: var(--accent);
-      background: rgba(114, 47, 55, 0.08);
+    .connect a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 1.25rem;
     }
 
-    .link-card svg {
-      width: 18px;
-      height: 18px;
-      flex-shrink: 0;
+    .connect a:hover {
+      text-decoration: underline;
     }
 
-    .link-card span {
-      font-weight: 500;
-    }
-
+    /* Sections */
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
+      padding-top: 0.5rem;
     }
 
     section h2 {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--text-muted);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
       margin: 0 0 1rem 0;
-    }
-
-    section h2 .section-icon {
-      width: 1.1rem;
-      height: 1.1rem;
-      flex-shrink: 0;
-      color: var(--accent);
+      letter-spacing: 0.01em;
     }
 
     .item {
-      padding: 1rem 0;
+      padding: 0.85rem 0;
       border-bottom: 1px solid var(--border);
     }
 
@@ -167,15 +159,34 @@
     }
 
     .item h3 {
-      font-size: 1rem;
+      font-size: 0.98rem;
       font-weight: 600;
-      margin: 0 0 0.25rem 0;
+      margin: 0 0 0.2rem 0;
+      line-height: 1.4;
+    }
+
+    .item h3 a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .item h3 a:hover {
+      color: var(--accent);
     }
 
     .item .meta {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .item .meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .item .meta a:hover {
+      text-decoration: underline;
     }
 
     .item p {
@@ -184,12 +195,12 @@
       color: var(--text);
     }
 
-    .item a {
+    .item p a {
       color: var(--accent);
       text-decoration: none;
     }
 
-    .item a:hover {
+    .item p a:hover {
       text-decoration: underline;
     }
 
@@ -204,79 +215,67 @@
 </head>
 <body>
   <div class="container">
-    <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#presentations">Presentations</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header id="about">
       <div class="profile-photo">
-        <img src="linkedin_pic.jpeg" alt="Brooks Benard" width="140" height="140" />
+        <img src="linkedin_pic.jpeg" alt="Brooks Benard" width="120" height="120" />
       </div>
       <h1>Brooks Benard, Ph.D.</h1>
       <p class="tagline">Computational Cancer Biologist · Stanford University</p>
+
+      <p class="bio">
+        I am a computational biologist in the Department of Pathology at Stanford University. My work focuses on developing and applying statistical learning methods to identify therapeutically relevant targets from gene expression data across bulk, single-cell, and spatial modalities in cancer.
+      </p>
+      <p class="bio">
+        I performed my PhD research with <a href="https://med.stanford.edu/profiles/ravindra-majeti" target="_blank" rel="noopener">Ravi Majeti</a> in the <a href="https://med.stanford.edu/cancerbiology.html" target="_blank" rel="noopener">Cancer Biology program</a> at Stanford University. Prior to Stanford, I completed my bachelor's degree in Molecular Biosciences and Biotechnology at ASU, where I spent time in the labs of <a href="https://search.asu.edu/profile/842640" target="_blank" rel="noopener">Dr. Shelley Haydel</a> at the Biodesign Institute, and <a href="https://www.keatslab.org/" target="_blank" rel="noopener">Dr. Jonathan Keats</a> at <a href="https://www.tgen.org/" target="_blank" rel="noopener">TGen</a>.
+      </p>
+
+      <div class="connect">
+        <a href="https://www.linkedin.com/in/brooks-benard" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=AJjgcfsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://github.com/brooksbenard" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://orcid.org/0000-0001-7154-744X" target="_blank" rel="noopener">ORCID</a>
+        <a href="https://profiles.stanford.edu/brooks-benard" target="_blank" rel="noopener">Stanford Profile</a>
+        <a href="https://precog.stanford.edu/" target="_blank" rel="noopener">PRECOG</a>
+        <a href="https://brooks-benard.shinyapps.io/DepMap_Shiny/" target="_blank" rel="noopener">DepMap Shiny</a>
+      </div>
     </header>
 
-    <p class="bio">
-      I am a computational biologist in the Department of Pathology at Stanford University. My work focuses on developing and applying statistical learning methods to identify therapeutically relevant targets from gene expression data across bulk, single-cell, and spatial modalities in cancer.
-    </p>
-    <p class="bio">
-      I performed my PhD research with <a href="https://med.stanford.edu/profiles/ravindra-majeti" target="_blank" rel="noopener">Ravi Majeti</a> in the <a href="https://med.stanford.edu/cancerbiology.html" target="_blank" rel="noopener">Cancer Biology program</a> at Stanford University. Prior to Stanford, I completed my bachelor's degree in Molecular Biosciences and Biotechnology at ASU, where I spent time in the labs of <a href="https://search.asu.edu/profile/842640" target="_blank" rel="noopener">Dr. Shelley Haydel</a> at the Biodesign Institute, and <a href="https://www.keatslab.org/" target="_blank" rel="noopener">Dr. Jonathan Keats</a> at <a href="https://www.tgen.org/" target="_blank" rel="noopener">TGen</a>.
-    </p>
-
-    <div class="links">
-      <a class="link-card" href="https://www.linkedin.com/in/brooks-benard" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        <span>LinkedIn</span>
-      </a>
-      <a class="link-card" href="https://scholar.google.com/citations?user=AJjgcfsAAAAJ&hl=en" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94L12 9.48l7.162 3.96L24 9.5zM12 13.247L4.838 17.19 12 21.132l7.162-3.942L12 13.247z"/></svg>
-        <span>Google Scholar</span>
-      </a>
-      <a class="link-card" href="https://github.com/brooksbenard" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-        <span>GitHub</span>
-      </a>
-      <a class="link-card" href="https://orcid.org/0000-0001-7154-744X" target="_blank" rel="noopener">ORCID</a>
-      <a class="link-card" href="https://profiles.stanford.edu/brooks-benard" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L12 2C14.7614 2 17 4.23858 17 7V7C17 9.76142 14.7614 12 12 12V12C9.23858 12 7 9.76142 7 7V7C7 4.23858 9.23858 2 12 2V2Z"/><path d="M12 14C12 14 6 16 6 22H18C18 16 12 14 12 14Z"/></svg>
-        <span>Stanford Profile</span>
-      </a>
-      <a class="link-card" href="https://precog.stanford.edu/" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></svg>
-        <span>PRECOG</span>
-      </a>
-      <a class="link-card" href="https://brooks-benard.shinyapps.io/DepMap_Shiny/" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-        <span>DepMap Shiny</span>
-      </a>
-    </div>
-
-    <section>
-      <h2><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg> Contact</h2>
-      <p class="bio" style="margin-bottom:0"><a href="mailto:bbenard@stanford.edu">bbenard@stanford.edu</a></p>
-    </section>
-
-    <section>
-      <h2><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/><path d="M12 11v6M9 14h6"/></svg> Projects & Apps</h2>
-      <div class="item">
-        <h3>PRECOG</h3>
-        <p class="meta"><a href="https://precog.stanford.edu/" target="_blank" rel="noopener">precog.stanford.edu</a></p>
-        <p>A compendium of gene expression and clinical outcome data for exploring prognostic and predictive biomarkers across cancers and treatment modalities.</p>
-      </div>
-      <div class="item">
-        <h3>DepMap Shiny</h3>
-        <p class="meta">Interactive R/Shiny app · <a href="https://brooks-benard.shinyapps.io/DepMap_Shiny/" target="_blank" rel="noopener">brooks-benard.shinyapps.io/DepMap_Shiny/</a></p>
-        <p>Explore cancer dependency and molecular data via an interactive Shiny application hosted on shinyapps.io.</p>
-      </div>
-    </section>
-
-    <section>
-      <h2><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg> Consulting</h2>
+    <section id="research">
+      <h2>Research</h2>
       <div class="item">
         <h3><a href="https://www.inograft.com/" target="_blank" rel="noopener">Inograft</a></h3>
-        <p class="meta">Biotherapeutics · Redwood City, CA</p>
+        <p class="meta">Consulting · Biotherapeutics · Redwood City, CA</p>
         <p>I provide consulting to <a href="https://www.inograft.com/" target="_blank" rel="noopener">Inograft</a>, which is pioneering targeted biologic conditioning for hematopoietic stem cell transplantation (HSCT) to make curative stem cell and gene therapies safer and more widely accessible.</p>
       </div>
     </section>
 
-    <section>
-      <h2><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/><path d="M8 7h8M8 11h8"/></svg> Selected Publications</h2>
+    <section id="resources">
+      <h2>Resources &amp; Tools</h2>
+      <div class="item">
+        <h3><a href="https://precog.stanford.edu/" target="_blank" rel="noopener">PRECOG</a></h3>
+        <p class="meta"><a href="https://precog.stanford.edu/" target="_blank" rel="noopener">precog.stanford.edu</a></p>
+        <p>A compendium of gene expression and clinical outcome data for exploring prognostic and predictive biomarkers across cancers and treatment modalities.</p>
+      </div>
+      <div class="item">
+        <h3><a href="https://brooks-benard.shinyapps.io/DepMap_Shiny/" target="_blank" rel="noopener">DepMap Shiny</a></h3>
+        <p class="meta">Interactive R/Shiny app · <a href="https://brooks-benard.shinyapps.io/DepMap_Shiny/" target="_blank" rel="noopener">brooks-benard.shinyapps.io/DepMap_Shiny/</a></p>
+        <p>Explore cancer dependency and molecular data via an interactive Shiny application.</p>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
       <p style="margin:0 0 1rem 0; font-size:0.9rem; color:var(--text-muted)">Full list on <a href="https://scholar.google.com/citations?user=AJjgcfsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
       <div class="item">
         <h3>Comprehensive molecular profiling of multiple myeloma identifies refined copy number and expression subtypes</h3>
@@ -295,8 +294,8 @@
       </div>
     </section>
 
-    <section>
-      <h2><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H4z"/><path d="M8 20h8"/><path d="M12 4v16"/></svg> Presentations &amp; Posters</h2>
+    <section id="presentations">
+      <h2>Presentations &amp; Posters</h2>
       <div class="item">
         <h3><a href="AI_Cancer_Poster.pdf" target="_blank" rel="noopener">Pan-cancer identification of cell states associated with prognostic risk and therapy response at single-cell and spatial resolution</a></h3>
         <p class="meta">November 4, 2025 · Stanford Cancer Institute <a href="https://med.stanford.edu/cancer/about/events/ai-cancer-symposium.html" target="_blank" rel="noopener">AI and Cancer Research Symposium</a></p>
@@ -304,9 +303,10 @@
       </div>
     </section>
 
-    <section>
-      <h2><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M9 17.5l3-7 3 7M15 10.5h3l-2 4"/><path d="M5.5 17.5h3l2-6.5"/></svg><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L4 22h6l2-7 2 7h6L12 2z"/><path d="M12 2v6"/></svg><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 5h12a1 1 0 011 1v12a1 1 0 01-1 1H6a1 1 0 01-1-1V6a1 1 0 011-1z"/><path d="M9 5V3h6v2"/><path d="M8 8h8M8 12h8"/><path d="M10 18v2M14 18v2"/></svg> Outside of Work</h2>
-      <p class="bio" style="margin-bottom:0">When I'm not in the lab, I enjoy cycling, hiking, and backpacking around The Bay — <a href="https://www.strava.com/athletes/65176248" target="_blank" rel="noopener">Strava</a>.</p>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="bio" style="margin-bottom:0"><a href="mailto:bbenard@stanford.edu">bbenard@stanford.edu</a></p>
+      <p class="bio" style="margin-top:0.5rem; margin-bottom:0">When I'm not in the lab, I enjoy cycling, hiking, and backpacking around The Bay — <a href="https://www.strava.com/athletes/65176248" target="_blank" rel="noopener">Strava</a>.</p>
     </section>
 
     <footer>
