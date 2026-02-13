@@ -426,8 +426,22 @@
     </section>
 
     <footer>
-      <p>Brooks Benard · Stanford University · Last updated 2025</p>
+      <p>Brooks Benard · Stanford University · Last updated <span id="last-updated">2025</span></p>
     </footer>
   </div>
+  <script>
+    (function() {
+      fetch('https://api.github.com/repos/brooksbenard/brooksbenard.github.io/commits?per_page=1')
+        .then(function(r) { return r.json(); })
+        .then(function(commits) {
+          if (commits && commits[0] && commits[0].commit && commits[0].commit.committer) {
+            var d = new Date(commits[0].commit.committer.date);
+            var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+            document.getElementById('last-updated').textContent = months[d.getMonth()] + ' ' + d.getFullYear();
+          }
+        })
+        .catch(function() {});
+    })();
+  </script>
 </body>
 </html>
