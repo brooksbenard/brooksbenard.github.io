@@ -18,7 +18,7 @@
       }
     })();
   </script>
-  <title>About Me - Brooks Benard, Ph.D.</title>
+  <title>Research - Brooks Benard, Ph.D.</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="site.css" />
 </head>
@@ -29,7 +29,7 @@
       <a class="masthead__brand" href="index.html">Brooks A. Benard</a>
       <nav class="masthead__menu" aria-label="Main">
         <ul class="masthead__nav">
-          <li><a href="research.html">Research</a></li>
+          <li><a href="research.html" class="is-active">Research</a></li>
           <li><a href="resources.html">Resources</a></li>
           <li><a href="publications.html">Publications</a></li>
           <li><a href="consulting.html">Consulting</a></li>
@@ -66,16 +66,15 @@
 
     <main class="page">
       <article>
-        <h1 class="page__title">About Me</h1>
-        <p class="bio">
-          I am a computational biologist in the Department of Pathology at Stanford University. My work focuses on developing and applying statistical learning methods to identify therapeutically relevant targets from gene expression data across bulk, single-cell, and spatial transcriptomic modalities in cancer.
-        </p>
-        <p class="bio">
-          I performed my PhD research with <a href="https://med.stanford.edu/profiles/ravindra-majeti" target="_blank" rel="noopener">Dr. Ravi Majeti</a> in the <a href="https://med.stanford.edu/cancerbiology.html" target="_blank" rel="noopener">Cancer Biology program</a> at Stanford University. Prior to Stanford, I completed my bachelor's degree in Molecular Biosciences and Biotechnology at ASU, where I spent time in the labs of <a href="https://search.asu.edu/profile/842640" target="_blank" rel="noopener">Dr. Shelley Haydel</a> at the Biodesign Institute, and <a href="https://www.keatslab.org/" target="_blank" rel="noopener">Dr. Jonathan Keats</a> at <a href="https://www.tgen.org/" target="_blank" rel="noopener">TGen</a>.
-        </p>
-        <p class="bio">
-          When I'm not in the lab, I enjoy cycling, hiking, and backpacking around The Bay — <a class="strava-link" href="https://www.strava.com/athletes/65176248" target="_blank" rel="noopener"><i class="fab fa-fw fa-strava icon-pad-right" aria-hidden="true"></i>Strava</a>.
-        </p>
+        <h1 class="page__title">Research</h1>
+        <p class="bio research-subhead"><strong>Current</strong></p>
+        <p class="bio">As a Staff Scientist in the <a href="https://ajglab.org/" target="_blank" rel="noopener">Gentles Lab</a>, I have curated a database of bulk gene expression associations with outcomes for adult, pediatric, and immunotherapy cohorts across cancers (<a href="https://precog.stanford.edu/" target="_blank" rel="noopener">PRECOG</a>; <a href="https://doi.org/10.1093/nar/gkaf1215" target="_blank" rel="noopener">paper</a>). PRECOG lets researchers examine whether higher expression of a gene and immune cell abundance are prognostic for shorter or longer patient survival. PRECOG includes 335 cancer datasets with survival or response data for &gt;46,000 patients, covering ~55 malignancies.</p>
+        <p class="bio">I have also developed a computational method to map prognostic signals from resources such as PRECOG onto single cell and spatial data. This approach helps identify cell states and spatial determinants of potential therapeutic targeting. We have applied this method in a pan-cancer approach to single cell data from <a href="https://tisch.compbio.cn/" target="_blank" rel="noopener">TISCH2</a> and <a href="https://scpca.alexslemonade.org/" target="_blank" rel="noopener">scPCA</a>, as well as spatial transcriptomics data from <a href="https://humantumoratlas.org/" target="_blank" rel="noopener">HTAN</a>. <a href="AI_Cancer_Poster.pdf" target="_blank" rel="noopener">See poster</a>.</p>
+        <p class="bio research-subhead"><strong>PhD</strong></p>
+        <p class="bio">My doctoral work focused on modeling how clonal architecture in AML is associated with prognostic risk and drug response. <a href="https://doi.org/10.1038/s41467-021-27472-5" target="_blank" rel="noopener">Clonal architecture paper</a>. <a href="https://brooks-benard.shinyapps.io/MetaAML_Shiny/" target="_blank" rel="noopener">Meta AML Explorer</a> provides interactive exploration of these data.</p>
+        <p class="bio research-subhead"><strong>Undergrad</strong></p>
+        <p class="bio undergrad-sublist">— <strong>Keats Lab:</strong> At TGen, I helped with the <a href="https://themmrf.org/finding-a-cure/personalized-treatment-approaches/" target="_blank" rel="noopener">MMRF CoMMpass Study</a> by analyzing the largest genomic sequencing of multiple myeloma to-date (<a href="https://www.nature.com/articles/s41588-024-01853-0" target="_blank" rel="noopener">Nature Genetics</a>).</p>
+        <p class="bio undergrad-sublist">— <strong>Haydel Lab:</strong> In the Haydel Lab at the Biodesign Institute, I performed some of the initial studies identifying druggable interactions in the PrrAB system in <em>Mycobacterium tuberculosis</em>, which helped lay the groundwork for <a href="https://pubs.acs.org/doi/abs/10.1021/acsinfecdis.5c00563" target="_blank" rel="noopener">Haydel et al., ACS Infect. Dis.</a>.</p>
       </article>
     </main>
   </div>

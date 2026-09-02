@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 56" role="img" aria-label="Balsam Bio" shape-rendering="geometricPrecision" text-rendering="optimizeLegibility">
+  <g font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="34" font-weight="200">
+    <!-- faint white outline behind BALSAM -->
+    <text x="1" y="40" fill="#323921" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round" paint-order="stroke fill" letter-spacing="0.17em">B&#923;LS&#923;M</text>
+    <!-- crisp BALSAM fill -->
+    <text x="1" y="40" fill="#323921" letter-spacing="0.17em">B&#923;LS&#923;M</text>
+    <!-- BIO -->
+    <text x="214" y="40" fill="#c7d5e5" letter-spacing="0.13em">BIO</text>
+  </g>
+</svg>
