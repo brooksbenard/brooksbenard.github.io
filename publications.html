@@ -32,6 +32,7 @@
           <li><a href="research.html">Research</a></li>
           <li><a href="resources.html">Resources</a></li>
           <li><a href="publications.html" class="is-active">Publications</a></li>
+          <li><a href="Brooks_Benard_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
           <li><a href="consulting.html">Consulting</a></li>
         </ul>
         <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle light and dark mode" title="Toggle theme">
@@ -47,7 +48,7 @@
         <img src="linkedin_pic.jpeg" alt="Brooks Benard" width="200" height="200" />
       </div>
       <h3 class="author__name">Brooks Benard, Ph.D.</h3>
-      <p class="author__bio">Computational cancer biologist developing statistical learning methods for gene expression across bulk, single-cell, and spatial transcriptomic data in cancer.</p>
+      <p class="author__bio">Computational biologist passionate about developing statistical learning methods for therapeutic target identification across cancer.</p>
       <div class="author__urls-wrapper">
         <button class="follow-toggle" type="button" aria-expanded="false" aria-controls="author-urls">Follow</button>
         <ul class="author__urls social-icons" id="author-urls">
@@ -58,30 +59,114 @@
           <li><a href="https://scholar.google.com/citations?user=AJjgcfsAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fab fa-fw fa-google-scholar icon-pad-right" aria-hidden="true"></i>Google Scholar</a></li>
           <li><a href="https://orcid.org/0000-0001-7154-744X" target="_blank" rel="noopener"><i class="fab fa-fw fa-orcid icon-pad-right" aria-hidden="true"></i>ORCiD</a></li>
           <li><a href="https://github.com/brooksbenard" target="_blank" rel="noopener"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/brooks-benard" target="_blank" rel="noopener"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li>
+          <li><a href="https://www.linkedin.com/in/brooksbenard/" target="_blank" rel="noopener"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li>
           <li><a href="https://www.strava.com/athletes/65176248" target="_blank" rel="noopener"><i class="fab fa-fw fa-strava icon-pad-right" aria-hidden="true"></i>Strava</a></li>
         </ul>
       </div>
     </aside>
 
     <main class="page">
-      <article>
-        <h1 class="page__title">Selected Publications</h1>
+      <article class="publications-page">
+        <a class="scholar-metrics" href="https://scholar.google.com/citations?user=AJjgcfsAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar citations and h-index">
+          <div class="scholar-metrics__stats">
+            <span><strong data-scholar="citations">—</strong> citations</span>
+            <span><strong data-scholar="h-index">—</strong> h-index</span>
+          </div>
+          <svg class="scholar-metrics__chart" viewBox="0 0 160 72" role="img" aria-hidden="true">
+            <g class="scholar-metrics__bars" fill="currentColor"></g>
+          </svg>
+        </a>
+
+        <h1 class="page__title">Publications</h1>
+        <p class="page__lead">Selected peer-reviewed papers in reverse chronological order.</p>
         <p class="pub-links">Full list on <a href="https://scholar.google.com/citations?user=AJjgcfsAAAAJ&hl=en" target="_blank" rel="noopener" class="scholar-link">Google Scholar</a> | <a href="https://orcid.org/0000-0001-7154-744X" target="_blank" rel="noopener" class="orcid-link">ORCiD</a></p>
-        <div class="item">
-          <h3>Comprehensive molecular profiling of multiple myeloma identifies refined copy number and expression subtypes</h3>
-          <p class="meta">S Skerget, D Penaherrera, A Chari, … B Benard, … · Nature Genetics 56 (9), 1878–1889 · 2024</p>
-          <p><a href="https://doi.org/10.1038/s41588-024-01853-0" target="_blank" rel="noopener">DOI 10.1038/s41588-024-01853-0</a></p>
+
+        <div class="filters" role="group" aria-label="Filter publications by category">
+          <button type="button" class="filter-btn active" data-filter="all">All</button>
+          <button type="button" class="filter-btn" data-filter="gene-expression">Gene Expression</button>
+          <button type="button" class="filter-btn" data-filter="aml">AML</button>
+          <button type="button" class="filter-btn" data-filter="multiple-myeloma">Multiple Myeloma</button>
         </div>
-        <div class="item">
-          <h3>Clonal architecture predicts clinical outcomes and drug sensitivity in acute myeloid leukemia</h3>
-          <p class="meta">BA Benard, LB Leak, A Azizi, D Thomas, AJ Gentles, R Majeti · Nature Communications 12 (1), 7244 · 2021</p>
-          <p><a href="https://doi.org/10.1038/s41467-021-27472-5" target="_blank" rel="noopener">DOI 10.1038/s41467-021-27472-5</a></p>
+
+        <div class="pub" data-tags="gene-expression">
+          <div class="pub-img">
+            <img src="resource-logos/PRECOG_Vizual.png" alt="Representative figure for PRECOG paper" />
+          </div>
+          <div class="pub-text">
+            <div class="title"><a href="https://doi.org/10.1093/nar/gkaf1215" target="_blank" rel="noopener">PRECOG update: an augmented resource of clinical outcome associations with gene expression for adult, pediatric, and immunotherapy cohorts</a></div>
+            <div class="meta"><strong>BA Benard</strong>, CK Lalgudi, I Ilerten, RH Wang, AJ Gentles — Nucleic Acids Research (2026)</div>
+            <div class="abstract" hidden data-full="Gene expression can be used to define prognostic and predictive biomarkers across cancers and treatment modalities. PRECOG (https://precog.stanford.edu) is a compendium of datasets with gene expression and clinical outcomes that facilitates visualization of associations between genomic profiles and patient survival. Here, we augment the existing PRECOG with over 10,000 new patients in previously poorly represented adult cancer types, as well as adding annotated pediatric and immunotherapy treated cohorts. Pediatric PRECOG comprises over 3,000 patients across 12 cancers; while the checkpoint inhibitor (ICI) PRECOG contains over 4,000 patients across 20 cancer subtypes from 80 distinct datasets across 51 studies. Together this represents a doubling in the size of the PRECOG database. We compute and visualize associations of gene expression with survival outcomes using Cox regression for time-to-event, or logistic regression for responder versus nonresponder, across all datasets. We also estimate cell type fractions in samples via computational deconvolution using CIBERSORTx, to identify survival associations at the level of cell types. All expression data, clinical annotations, and gene and cell type survival z-scores and meta-z scores for adult, pediatric, and ICI PRECOG, are available for interactive analysis and download, along with Kaplan-Meier and boxplot visualizations. This updated resource will provide new insights into biomarkers for specific therapies, populations, and cancer types."></div>
+            <div class="abstract-actions"><button type="button" class="show-more">Show more</button></div>
+            <div class="tags"><span class="tag">Gene Expression</span></div>
+          </div>
         </div>
-        <div class="item">
-          <h3>PRECOG update: an augmented resource of clinical outcome associations with gene expression</h3>
-          <p class="meta">BA Benard, CK Lalgudi, I Ilerten, RH Wang, AJ Gentles · Nucleic Acids Research 54 (D1), D1579–D1589 · 2026</p>
-          <p><a href="https://doi.org/10.1093/nar/gkaf1215" target="_blank" rel="noopener">DOI 10.1093/nar/gkaf1215</a></p>
+
+        <div class="pub" data-tags="multiple-myeloma">
+          <div class="pub-img">
+            <img src="resource-logos/MMRF_CoMMpass_vizual.png" alt="Representative figure for MMRF CoMMpass multiple myeloma paper" />
+          </div>
+          <div class="pub-text">
+            <div class="title"><a href="https://doi.org/10.1038/s41588-024-01853-0" target="_blank" rel="noopener">Comprehensive molecular profiling of multiple myeloma identifies refined copy number and expression subtypes</a></div>
+            <div class="meta">S Skerget, D Penaherrera, A Chari, … <strong>BA Benard</strong>, … JJ Keats — Nature Genetics (2024)</div>
+            <div class="abstract" hidden data-full="Multiple myeloma is a treatable, but currently incurable, hematological malignancy of plasma cells characterized by diverse and complex tumor genetics for which precision medicine approaches to treatment are lacking. The Multiple Myeloma Research Foundation's Relating Clinical Outcomes in Multiple Myeloma to Personal Assessment of Genetic Profile study (NCT01454297) is a longitudinal, observational clinical study of newly diagnosed patients with multiple myeloma (n = 1,143) where tumor samples are characterized using whole-genome sequencing, whole-exome sequencing and RNA sequencing at diagnosis and progression, and clinical data are collected every 3 months. Analyses of the baseline cohort identified genes that are the target of recurrent gain-of-function and loss-of-function events. Consensus clustering identified 8 and 12 unique copy number and expression subtypes of myeloma, respectively, identifying high-risk genetic subtypes and elucidating many of the molecular underpinnings of these unique biological groups. Analysis of serial samples showed that 25.5% of patients transition to a high-risk expression subtype at progression. We observed robust expression of immunotherapy targets in this subtype, suggesting a potential therapeutic option."></div>
+            <div class="abstract-actions"><button type="button" class="show-more">Show more</button></div>
+            <div class="tags"><span class="tag">Multiple Myeloma</span></div>
+          </div>
+        </div>
+
+        <div class="pub" data-tags="aml">
+          <div class="pub-img">
+            <img src="resource-logos/Clonal_Architecture_Vizual.webp" alt="Representative figure for AML clonal architecture paper" />
+          </div>
+          <div class="pub-text">
+            <div class="title"><a href="https://doi.org/10.1038/s41467-021-27472-5" target="_blank" rel="noopener">Clonal architecture predicts clinical outcomes and drug sensitivity in acute myeloid leukemia</a></div>
+            <div class="meta"><strong>BA Benard</strong>, LB Leak, A Azizi, D Thomas, AJ Gentles, R Majeti — Nature Communications (2021)</div>
+            <div class="abstract" hidden data-full="The impact of clonal heterogeneity on disease behavior or drug response in acute myeloid leukemia remains poorly understood. Using a cohort of 2,829 patients, we identify features of clonality associated with clinical features and drug sensitivities. High variant allele frequency for 7 mutations (including NRAS and TET2) associate with dismal prognosis; elevated GATA2 variant allele frequency correlates with better outcomes. Clinical features such as white blood cell count and blast percentage correlate with the subclonal abundance of mutations such as TP53 and IDH1. Furthermore, patients with cohesin mutations occurring before NPM1, or transcription factor mutations occurring before splicing factor mutations, show shorter survival. Surprisingly, a branched pattern of clonal evolution is associated with superior clinical outcomes. Finally, several mutations (including NRAS and IDH1) predict drug sensitivity based on their subclonal abundance. Together, these results demonstrate the importance of assessing clonal heterogeneity with implications for prognosis and actionable biomarkers for therapy."></div>
+            <div class="abstract-actions"><button type="button" class="show-more">Show more</button></div>
+            <div class="tags"><span class="tag">AML</span></div>
+          </div>
+        </div>
+
+        <div class="pub" data-tags="aml">
+          <div class="pub-img">
+            <img src="resource-logos/Data_Mining_Vizual.webp" alt="Representative figure for AML data mining review" />
+          </div>
+          <div class="pub-text">
+            <div class="title"><a href="https://doi.org/10.1038/s41375-019-0387-y" target="_blank" rel="noopener">Data mining for mutation-specific targets in acute myeloid leukemia</a></div>
+            <div class="meta"><strong>BA Benard</strong>, AJ Gentles, T Köhnke, R Majeti, D Thomas — Leukemia (2019)</div>
+            <div class="abstract" hidden data-full="Three mutation-specific targeted therapies have recently been approved by the FDA for the treatment of acute myeloid leukemia (AML): midostaurin for FLT3 mutations, enasidenib for relapsed or refractory cases with IDH2 mutations, and ivosidenib for cases with an IDH1 mutation. Together, these agents offer a mutation-directed treatment approach for up to 45% of de novo adult AML cases, a welcome deluge after a prolonged drought. At the same time, a number of computational tools have recently been developed that promise to further accelerate progress in mutation-specific therapy for AML and other cancers. Technical advances together with comprehensively annotated AML tissue banks have resulted in the availability of large and complex data sets for exploration by the end-user, including (i) microarray gene expression, (ii) exome sequencing, (iii) deep sequencing data of sub-clone heterogeneity, (iv) RNA sequencing of gene expression (bulk and single cell), (v) DNA methylation and chromatin, (vi) and germline quantitative trait loci. Yet few clinicians or experimental hematologists have the time or the training to access or analyze these repositories. This review summarizes the data sets and bioinformatic tools currently available to further the discovery of mutation-specific targets with an emphasis on web-based applications that are open, accessible, user-friendly, and do not require coding experience to navigate. We show examples of how available data can be mined to identify potential targets using synthetic lethality, drug repurposing, epigenetic sub-grouping, and proteomic networks while also highlighting strengths and limitations and the need for superior models for validation."></div>
+            <div class="abstract-actions"><button type="button" class="show-more">Show more</button></div>
+            <div class="tags"><span class="tag">AML</span></div>
+          </div>
+        </div>
+
+        <div class="pub" data-tags="aml">
+          <div class="pub-img">
+            <img src="resource-logos/BeatAML_commentary_Vizual.jpg" alt="Representative figure for BEAT AML commentary" />
+          </div>
+          <div class="pub-text">
+            <div class="title"><a href="https://doi.org/10.1016/j.leukres.2019.02.006" target="_blank" rel="noopener">Predicting response to new drugs in AML from simulation modelling: Value of the BEAT AML project as a validation resource</a></div>
+            <div class="meta"><strong>BA Benard</strong>, D Thomas — Leukemia Research (2019)</div>
+            <div class="abstract" hidden data-full="Editorial commentary on predicting response to new drugs in acute myeloid leukemia from simulation modelling, highlighting the value of the BEAT AML project as a validation resource for computational approaches to drug sensitivity."></div>
+            <div class="abstract-actions"><button type="button" class="show-more">Show more</button></div>
+            <div class="tags"><span class="tag">AML</span></div>
+          </div>
+        </div>
+
+        <div class="pub" data-tags="multiple-myeloma">
+          <div class="pub-img">
+            <img src="resource-logos/FGFR3_Vizual.png" alt="Representative figure for FGFR3 MMRF CoMMpass paper" />
+          </div>
+          <div class="pub-text">
+            <div class="title"><a href="https://www.sciencedirect.com/science/article/pii/S0006497119835437" target="_blank" rel="noopener">FGFR3 Mutations Are an Adverse Prognostic Factor in Patients with t(4;14)(p16;q32) Multiple Myeloma: An MMRF CoMMpass Analysis</a></div>
+            <div class="meta"><strong>BA Benard</strong>, A Christofferson, C Legendre, J Aldrich, S Nasser, J Yesil, D Auclair, W Liang, S Lonial, JJ Keats — Blood (2017)</div>
+            <div class="abstract" hidden data-full="Using the MMRF CoMMpass study, we analyzed FGFR3 expression and mutation status in patients with t(4;14) multiple myeloma. Whole-exome sequencing detected non-synonymous FGFR3 mutations in 20% of t(4;14) patients. Survival analysis showed a statistically significant adverse prognosis in t(4;14)+ FGFR3mut-expressing patients (median survival = 2.8 years) compared with t(4;14)+ FGFR3wt-expressing patients (median survival not reached). Although WHSC1 is the primary target of t(4;14), these results support mutated FGFR3 as a gain-of-function event associated with worse disease in t(4;14) patients."></div>
+            <div class="abstract-actions"><button type="button" class="show-more">Show more</button></div>
+            <div class="tags">
+              <span class="tag">Multiple Myeloma</span>
+              <a class="tag-link" href="ASH_2017_MMRF_CoMMpass_FGFR3_mutations_KeatsLab.pdf" target="_blank" rel="noopener">Poster</a>
+            </div>
+          </div>
         </div>
       </article>
     </main>
