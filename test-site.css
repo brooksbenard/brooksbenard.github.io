@@ -47,6 +47,18 @@ a:hover {
   text-decoration: underline;
 }
 
+.test-banner {
+  background: rgba(114, 47, 55, 0.1);
+  border-bottom: 1px solid var(--border);
+  padding: 0.45rem 1rem;
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.test-banner a {
+  font-weight: 600;
+}
 
 .masthead {
   position: sticky;
