@@ -227,6 +227,13 @@
     });
   }
 
-  updateResearchTimeline();
-  window.addEventListener('resize', updateResearchTimeline);
+  function updateResearchLayout() {
+    updateResearchTimeline();
+  }
+
+  updateResearchLayout();
+  window.addEventListener('resize', updateResearchLayout);
+  document.querySelectorAll('.research-branch__figure img').forEach(function(img) {
+    img.addEventListener('load', updateResearchLayout);
+  });
 })();
