@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+
+# Local layout previews (live site uses index.html, site.css, site.js)
+*-test.html
+test-site.css
+test-site.js
+
+# Bananarama image-generation working files
+bananarama.yaml
+bananarama/
+brooks.png
+Brooks-Benard-Photo.jpeg
+Brooks-Benard-Photo.png
+
+# Resume drafts (public site uses Brooks_Benard_Resume.pdf)
+Brooks_Benard_Resume.html
+Brooks_Benard_Resume.md
+
+# Source / editor working files
+*.pptx
+*.tiff
+
+# Duplicate root copies of assets that already live in resource-logos/
+/BeatAML_commentary_Vizual.jpg
+/Clonal_Architecture_Vizual.webp
+/Data_Mining_Vizual.webp
+/FGFR3_Vizual.png
+/FGFR3_mutation_status.png
+/MMRF_CoMMpass_vizual.tiff
+/PhenoMapR_logo.png
+/phenomapr_manuscript_schematic.png
