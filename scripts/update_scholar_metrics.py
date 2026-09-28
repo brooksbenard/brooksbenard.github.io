@@ -63,8 +63,8 @@ def main() -> int:
         html = fetch_html(URL)
         data = parse_metrics(html)
     except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, ValueError) as exc:
-        print(f"Scholar metrics update skipped: {exc}", file=sys.stderr)
-        return 0
+        print(f"Scholar metrics update failed: {exc}", file=sys.stderr)
+        return 1
 
     previous = {}
     if OUT.exists():

@@ -116,10 +116,10 @@
   initAbstracts();
 
   var SCHOLAR_METRICS_FALLBACK = {
-    citations: 475,
+    citations: 486,
     h_index: 10,
     years: [2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026],
-    counts: [6, 14, 27, 39, 57, 74, 131, 121]
+    counts: [6, 14, 27, 38, 57, 74, 130, 131]
   };
 
   function renderScholarMetrics(data) {

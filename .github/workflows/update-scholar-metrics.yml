@@ -2,8 +2,9 @@ name: Update Scholar metrics
 
 on:
   schedule:
-    # Mondays at 16:00 UTC
-    - cron: "0 16 * * 1"
+    # Mondays at 16:17 UTC. Avoid the top of the hour, when
+    # GitHub often delays or drops scheduled runs.
+    - cron: "17 16 * * 1"
   workflow_dispatch:
 
 permissions:
