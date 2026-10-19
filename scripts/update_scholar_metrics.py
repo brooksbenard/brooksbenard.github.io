@@ -2,7 +2,8 @@
 """Fetch Google Scholar citation metrics and write scholar-metrics.json.
 
 Google Scholar has no public API, so this scrapes the public profile HTML.
-If Scholar blocks the request, the existing JSON is left unchanged.
+If Scholar blocks the request (common from GitHub Actions IPs), the existing
+JSON is left unchanged and the process exits 0 so the workflow stays green.
 """
 
 from __future__ import annotations
@@ -10,6 +11,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+import time
 import urllib.error
 import urllib.request
 from datetime import date
@@ -18,24 +20,38 @@ from pathlib import Path
 USER_ID = "AJjgcfsAAAAJ"
 OUT = Path(__file__).resolve().parent.parent / "scholar-metrics.json"
 URL = f"https://scholar.google.com/citations?user={USER_ID}&hl=en"
+MAX_ATTEMPTS = 3
+
+# Browser-like headers; bot UAs are often blocked from Actions runners.
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+}
 
 
 def fetch_html(url: str) -> str:
-    req = urllib.request.Request(
-        url,
-        headers={
-            "User-Agent": (
-                "Mozilla/5.0 (compatible; BrooksBenardSiteBot/1.0; "
-                "+https://brooksbenard.github.io)"
-            ),
-            "Accept-Language": "en-US,en;q=0.9",
-        },
-    )
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return resp.read().decode("utf-8", errors="replace")
+    last_error: Exception | None = None
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        try:
+            req = urllib.request.Request(url, headers=HEADERS)
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return resp.read().decode("utf-8", errors="replace")
+        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError) as exc:
+            last_error = exc
+            if attempt < MAX_ATTEMPTS:
+                time.sleep(2 * attempt)
+    assert last_error is not None
+    raise last_error
 
 
 def parse_metrics(html: str) -> dict:
+    if "sorry/index" in html or "captcha" in html.lower():
+        raise ValueError("Scholar returned a captcha / block page")
+
     years = [int(y) for y in re.findall(r'class="gsc_g_t"[^>]*>(\d{4})', html)]
     counts = [int(v) for v in re.findall(r'class="gsc_g_al"[^>]*>(\d+)', html)]
     stats = [int(v) for v in re.findall(r'class="gsc_rsb_std"[^>]*>(\d+)', html)]
@@ -63,8 +79,10 @@ def main() -> int:
         html = fetch_html(URL)
         data = parse_metrics(html)
     except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, ValueError) as exc:
-        print(f"Scholar metrics update failed: {exc}", file=sys.stderr)
-        return 1
+        # Soft-skip: keep last good JSON. Exit 0 so scheduled runs aren't red
+        # when Scholar blocks datacenter IPs.
+        print(f"Scholar metrics update skipped: {exc}", file=sys.stderr)
+        return 0
 
     previous = {}
     if OUT.exists():
