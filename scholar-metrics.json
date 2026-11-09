@@ -1,7 +1,7 @@
 {
   "user": "AJjgcfsAAAAJ",
-  "updated": "2026-10-19",
-  "citations": 490,
+  "updated": "2026-11-09",
+  "citations": 503,
   "h_index": 10,
   "i10_index": 10,
   "years": [
@@ -15,13 +15,13 @@
     2026
   ],
   "counts": [
-    6,
+    7,
     14,
     27,
     38,
     57,
     74,
-    130,
-    135
+    129,
+    148
   ]
 }
